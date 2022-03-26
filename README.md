@@ -12,10 +12,12 @@ List requirements here.
 
 Docker stuff...
 
+
 # Files
 
 The Scripts directory contains all the python scripts for this project. 
 
+Model can be found at : https://drive.google.com/drive/folders/1_1lmUQevZ_OiZuPWVFRpggHATMKln2hn?usp=sharing
 
 ## Scripts/model_training.py
 
