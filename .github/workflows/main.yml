@@ -1,8 +1,5 @@
 name: LarryLawl-alternative
-on:
-  issues:
-    types: [opened, edited]
-
+on: public # Basically never runs automatically
 jobs:
   auto_label:
     runs-on: ubuntu-latest
