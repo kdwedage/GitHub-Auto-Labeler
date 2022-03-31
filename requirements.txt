@@ -30,6 +30,7 @@ opt-einsum==3.3.0
 packaging==21.3
 pandas==1.4.1
 Pillow==9.0.0
+pip==21.3.1
 protobuf==3.19.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -61,4 +62,5 @@ typing-extensions==3.10.0.2
 uritemplate==4.1.1
 urllib3==1.25.8
 Werkzeug==2.0.2
+wheel==0.34.2
 wrapt==1.13.3
