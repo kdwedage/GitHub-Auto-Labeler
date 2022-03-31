@@ -1,7 +1,5 @@
 name: LarryLawl-alternative
-on:
-  issues:
-    types: [opened, edited]
+on: public
 jobs:
   auto_label:
     runs-on: ubuntu-latest
