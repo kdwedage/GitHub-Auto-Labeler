@@ -119,10 +119,10 @@ def evaluateLocalModel():
 # Uncomment the commands to run
 def main():
     repo = gitHubLoginAndReturnRepo()
-    evaluateLocalModel()
+    #evaluateLocalModel()
     #pushIssuesToRepoFromDataset(repo)
     #evaluateAlternativeMethod(repo)
-    #closeAllOpenIssues(repo)
+    closeAllOpenIssues(repo)
 
 if __name__ == '__main__':
     main()
