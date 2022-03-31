@@ -14,7 +14,7 @@ Note save the model to the datasets directory, unless you wish to mount an addit
 
 # Instructions
 
-Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]' is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files.
+Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]` is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files.
 
 ```bash
 sudo docker run -v [DATASET PATH] -v [SCRIPTS PATH] --gpus all -it github_auto_labeler bash
