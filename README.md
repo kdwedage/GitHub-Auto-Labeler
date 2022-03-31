@@ -37,8 +37,6 @@ python [SCRIPTS PATH]/performance_comparison.py
 
 The Scripts directory contains all the python scripts for this project. 
 
-Model can be found at : 
-
 ## Scripts/model_training.py
 
 This file is dedicated to determing the best parameters (hyperparameters) for the model used in this project.
