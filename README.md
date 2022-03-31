@@ -10,9 +10,11 @@ A tool for automatically labeling GitHub issues using BERT. The main model in th
 3. Install the model : https://drive.google.com/drive/folders/1_1lmUQevZ_OiZuPWVFRpggHATMKln2hn?usp=sharing
 4. Install the datasets : https://www.kaggle.com/arbazkhan971/github-bugs-prediction-challenge-machine-hack
 
+Note save the model to the datasets directory, unless you wish to mount an additional volume to the docker image.
+
 # Instructions
 
-Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script.
+Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]' is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files.
 
 ```bash
 sudo docker run -v [DATASET PATH] -v [SCRIPTS PATH] --gpus all -it github_auto_labeler bash
