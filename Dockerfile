@@ -4,4 +4,4 @@ COPY Scripts/model_evaluating.py model_evaluating.py
 COPY Scripts/performance_comparison.py performance_comparison.py
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-CMD ["python", "model_evaluating.py", "--host=0.0.0.0"]
+CMD ["python3", "model_evaluating.py", "--host=0.0.0.0"]
