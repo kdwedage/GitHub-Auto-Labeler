@@ -57,7 +57,6 @@ def processIssue(gh, username, repo, issue_num, model, verbose = False):
 def evaluate(username, model, gh):
     while(1):
         repo = input('Please enter the GitHub repository: ') # Example: GitHub_Auto-Labeler
-        repo = 'GitHub_Auto-Labeler'
         if(repo.strip().lower() == 'exit'):
             break
         
