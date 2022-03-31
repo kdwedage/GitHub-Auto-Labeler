@@ -1,7 +1,7 @@
-FROM python:3.8.10-slim
-COPY Scripts/model_training.py model_training.py
-COPY Scripts/model_evaluating.py model_evaluating.py
-COPY Scripts/performance_comparison.py performance_comparison.py
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-CMD ["python3", "model_evaluating.py", "--host=0.0.0.0"]
+FROM python:3.6.5-slim
+COPY pipeline/scripts/labeller.py labeller.py
+COPY pipeline/scripts/utils.py utils.py
+COPY final_model final_model
+COPY requirements-lite.txt requirements-lite.txt
+RUN pip3 install -r requirements-lite.txt
+CMD ["python3", "labeller.py", "--host=0.0.0.0"]

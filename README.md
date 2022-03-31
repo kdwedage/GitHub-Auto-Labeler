@@ -3,21 +3,19 @@
 
 A tool for automatically labeling GitHub issues using BERT. The main model in this project was trained using the dataset provided in reference 1.
 
-
 # Requirements
 
-List requirements here.
 
 # Instructions
 
-Docker stuff...
+Please install docker
 
 
 # Files
 
 The Scripts directory contains all the python scripts for this project. 
 
-Model can be found at : https://drive.google.com/drive/folders/1_1lmUQevZ_OiZuPWVFRpggHATMKln2hn?usp=sharing
+Model can be found at : 
 
 ## Scripts/model_training.py
 
