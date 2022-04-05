@@ -14,7 +14,7 @@ Note save the model to the datasets directory, unless you wish to mount an addit
 
 # Instructions
 
-Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]` is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files. The `--gpus all` option may or may not work on your system without nvidia/cuda. Installation guide can be found here: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html. You can attempt to run the files without it, but all my testing was done with it.
+Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]` is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files. The `--gpus all` option may or may not work on your system without installing nvidia/cuda. Installation guide can be found here: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html. You can attempt to run the files without it, but all my testing was done with it. A demo of running the the main tool (model_evaluation) can be found here: https://drive.google.com/file/d/1ZgzX4ExcRs9II0P7gQm0Y9mr8ixnIczu/view?usp=sharing. 
 
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH] --gpus all -it github_auto_labeler bash
@@ -28,7 +28,7 @@ sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUN
 python [SCRIPTS PATH]/model_training.py
 ```
 
-The performance_comparison.py script is intended to compare the performance of the alternative implemention with the model. IMPORTANT: This file should be edited to run the desired functionality. Currently it is set to close all open issues.
+The performance_comparison.py script is intended to compare the performance of the alternative implemention with the model. IMPORTANT: This file should be edited to run the desired functionality. Currently it is set to close all open issues. Just comment/uncomment the desired functions in the main method.
 
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH]  --gpus all -it github_auto_labeler bash
