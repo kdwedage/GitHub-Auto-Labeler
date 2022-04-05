@@ -14,8 +14,9 @@ Note save the model to the datasets directory, unless you wish to mount an addit
 
 # Instructions
 
-Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. The  `-v [DATASET PATH]` is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files. The `--gpus all` option may or may not work on your system without installing nvidia/cuda. Installation guide can be found here: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html. You can attempt to run the files without it, but all my testing was done with it. A demo of running the the main tool (model_evaluation) can be found here: https://drive.google.com/file/d/1ZgzX4ExcRs9II0P7gQm0Y9mr8ixnIczu/view?usp=sharing. 
+Once docker is installed. To run the GitHub Auto-Labeler all you need to run is the model_evaluating.py script. Proceed to Options & Troubleshooting for more explanation of the parameters. 
 
+## To run: model_evaluating.py
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH] --gpus all -it github_auto_labeler bash
 python [MOUNTED SCRIPT PATH]/model_evaluating.py
@@ -23,17 +24,27 @@ python [MOUNTED SCRIPT PATH]/model_evaluating.py
 
 The model_training.py script is intended to create the model file, if not downloaded. Adjustments can be made directly to the code of this file, to customize the model.
 
+## To run: model_training.py
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH]  --gpus all -it github_auto_labeler bash
 python [MOUNTED SCRIPT PATH]/model_training.py
 ```
-
+## To run: performance_comparison.py
 The performance_comparison.py script is intended to compare the performance of the alternative implemention with the model. IMPORTANT: This file should be edited to run the desired functionality. Currently it is set to close all open issues. Just comment/uncomment the desired functions in the main method. 
 
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH]  --gpus all -it github_auto_labeler bash
 python [MOUNTED SCRIPT PATH]/performance_comparison.py
 ```
+# Options & Troubleshooting
+- The  `-v [DATASET PATH]:[MOUNTED DATASET PATH]` is unneccessary if you do not plan on running the model_training.py or perfomance_comparison.py files.
+
+- The `--gpus all` option may or may not work on your system without installing nvidia/cuda. Installation guide can be found here: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html. 
+You can attempt to run the files without it, but all my testing was done with it.
+
+- A demo of running the the main tool (model_evaluation) can be found here: https://drive.google.com/file/d/1ZgzX4ExcRs9II0P7gQm0Y9mr8ixnIczu/view?usp=sharing. 
+
+
 
 # Files
 
