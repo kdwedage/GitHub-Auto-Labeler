@@ -28,8 +28,7 @@ sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUN
 python [SCRIPTS PATH]/model_training.py
 ```
 
-The performance_comparison.py script is intended to compare the performance of the alternative implemention with the model. IMPORTANT: This file should be edited to run the desired functionality. Currently it is set to close all open issues. Just comment/uncomment the desired functions in the main method. In addition, the performance_comparision script is intended to compare between the current model and https://github.com/
-larrylawl/auto-github-issue-labeller-action. However, there are issues with comparing the performance of this tool and the alternative implemention by Larry Lawl, this includes: a limitation in the amount of issues that the GitHub API allows to push in one session, the time it takes for the GitHub action to run (greater than 1 minute per issue), and the classes of labels that each model outputs (Bug, Feature, Question vs Bug, Enchancement, Documentation). 
+The performance_comparison.py script is intended to compare the performance of the alternative implemention with the model. IMPORTANT: This file should be edited to run the desired functionality. Currently it is set to close all open issues. Just comment/uncomment the desired functions in the main method. 
 
 ```bash
 sudo docker run -v [DATASET PATH]:[MOUNTED DATASET PATH] -v [SCRIPTS PATH]:[MOUNTED SCRIPT PATH]  --gpus all -it github_auto_labeler bash
@@ -55,7 +54,7 @@ This file is dedicated to evaluating a given model on a GitHub repository. Prior
 
 This file is intended to create GitHub issues and compare the performance of the saved model passed into it, with the alternative implementation found on GitHub marketplace, under larrylawl/Auto-Github-Issue-Labeller.
 
-It is important to note that the alternative implementation was trained on a different training dataset and does not have entirely the same output classes (GitHub issue labels). 
+However, some issues came up when trying to compare the performance of this tool and the alternative implemention by Larry Lawl, this includes: a limitation in the amount of issues that the GitHub API allows to push in one session, the time it takes for the GitHub action to run (greater than 1 minute per issue), and the classes of labels that each model outputs (Bug, Feature, Question vs. Bug, Enchancement, Documentation). Not to mention, a standard test dataset that both models can fairly compare against. 
 
 
 # References:
