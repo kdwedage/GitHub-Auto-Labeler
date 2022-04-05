@@ -1,7 +1,7 @@
 # GitHub_Auto-Labeler
 
 
-A tool for automatically labeling GitHub issues using BERT. The main model in this project was trained using the dataset provided in reference 1.
+A tool for automatically labeling GitHub issues using BERT. The main model in this project was trained using the dataset provided in reference 1. Altogether, this project was a great opportunity to learn about Natural Language Processing (BERT) and to apply these concepts to a practical application (GitHub issue labeling). 
 
 # Requirements
 
